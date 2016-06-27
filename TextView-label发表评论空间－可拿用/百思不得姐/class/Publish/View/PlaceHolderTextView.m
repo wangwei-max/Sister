@@ -61,9 +61,15 @@
     self.placederLabel.hidden = self.hasText;
 }
 /** 更新文字占位尺寸*/
--(void)updatePlaceholderLabelSize
+/** setNeddsDisplay: 会在恰当的时候调用drwaRext*/
+/** layoutSubviews: 会在恰当的时候调用setNeedsLayout*/
+
+
+-(void)layoutSubviews
 {
-    CGSize maxSize = CGSizeMake(ScreenW - 2 * self.placederLabel.x, MAXFLOAT);
+    [super layoutSubviews];
+    
+    CGSize maxSize = CGSizeMake(self.width - 2 * self.placederLabel.x, MAXFLOAT);
     self.placederLabel.size = [self.placeholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
 }
 
@@ -78,14 +84,14 @@
 {
     _placeholder = [placeholder copy];
     self.placederLabel.text = placeholder;
-    [self updatePlaceholderLabelSize];
+    [self setNeedsLayout];
 }
 
 -(void)setFont:(UIFont *)font
 {
     [super setFont:font];
     self.placederLabel.font = font;
-    [self updatePlaceholderLabelSize];
+    [self setNeedsLayout];
 }
 
 -(void)setText:(NSString *)text
