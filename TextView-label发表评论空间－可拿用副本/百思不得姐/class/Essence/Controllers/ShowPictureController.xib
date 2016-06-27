@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowPictureController">
+            <connections>
+                <outlet property="backbBtn" destination="ZE9-gS-Tav" id="1nf-5b-xeX"/>
+                <outlet property="relayBtn" destination="oxe-08-qvI" id="0lt-f1-yRW"/>
+                <outlet property="s" destination="lOG-8Z-QMb" id="kJ2-Dc-Fmq"/>
+                <outlet property="saveBtn" destination="FDk-3b-0Yg" id="6CT-HL-u8B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOG-8Z-QMb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE9-gS-Tav">
+                    <rect key="frame" x="10" y="10" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="OGF-V0-T1Z"/>
+                        <constraint firstAttribute="width" constant="46" id="gsV-SJ-ePP"/>
+                    </constraints>
+                    <state key="normal" title="返回" image="loginBtnBg">
+                        <color key="titleColor" red="0.49129742529999998" green="0.8226526019" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backBtn:" destination="-1" eventType="touchUpInside" id="M6w-KO-ZX6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDk-3b-0Yg" userLabel="保存">
+                    <rect key="frame" x="544" y="560" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6mk-CQ-58T"/>
+                        <constraint firstAttribute="width" constant="46" id="RAa-if-BOH"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" red="0.49129742529999998" green="0.8226526019" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="savBtn:" destination="-1" eventType="touchUpInside" id="9ee-ct-fwn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxe-08-qvI" userLabel="转发">
+                    <rect key="frame" x="488" y="560" width="46" height="30"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="W2J-CQ-0yY"/>
+                        <constraint firstAttribute="height" constant="30" id="k5Y-Yr-6mu"/>
+                    </constraints>
+                    <state key="normal" title="转发">
+                        <color key="titleColor" red="0.49129742529999998" green="0.8226526019" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="relayBtn:" destination="-1" eventType="touchUpInside" id="IKf-Id-FXZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lOG-8Z-QMb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="43D-yg-lnO"/>
+                <constraint firstAttribute="bottom" secondItem="oxe-08-qvI" secondAttribute="bottom" constant="10" id="6Cd-UO-xpC"/>
+                <constraint firstAttribute="trailing" secondItem="FDk-3b-0Yg" secondAttribute="trailing" constant="10" id="EGD-pF-Fg6"/>
+                <constraint firstAttribute="trailing" secondItem="lOG-8Z-QMb" secondAttribute="trailing" id="FXr-TU-u8m"/>
+                <constraint firstItem="FDk-3b-0Yg" firstAttribute="leading" secondItem="oxe-08-qvI" secondAttribute="trailing" constant="10" id="KMO-ao-0NI"/>
+                <constraint firstAttribute="bottom" secondItem="FDk-3b-0Yg" secondAttribute="bottom" constant="10" id="Qx0-Wy-Wzh"/>
+                <constraint firstItem="ZE9-gS-Tav" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="TQy-7O-AnE"/>
+                <constraint firstItem="lOG-8Z-QMb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jJw-cz-kA1"/>
+                <constraint firstItem="ZE9-gS-Tav" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="kv3-ii-49n"/>
+                <constraint firstAttribute="bottom" secondItem="lOG-8Z-QMb" secondAttribute="bottom" id="peU-91-3oG"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="loginBtnBg" width="55" height="45"/>
+    </resources>
+</document>
