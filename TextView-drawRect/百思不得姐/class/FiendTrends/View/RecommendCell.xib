@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="category" id="KGk-i7-Jjw" customClass="RecommendCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3h-ux-Dpe" userLabel="bottomLine">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="KC6-Zn-i3A"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E20-6S-DAY" userLabel="LeftView">
+                        <rect key="frame" x="0.0" y="0.0" width="10" height="43"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="10" id="1Gb-hG-NfC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="E20-6S-DAY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="C0F-nA-O38"/>
+                    <constraint firstItem="c3h-ux-Dpe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ey8-zH-mZZ"/>
+                    <constraint firstAttribute="trailing" secondItem="c3h-ux-Dpe" secondAttribute="trailing" id="VBP-jz-F4o"/>
+                    <constraint firstItem="E20-6S-DAY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bQw-LG-9IT"/>
+                    <constraint firstAttribute="bottom" secondItem="c3h-ux-Dpe" secondAttribute="bottom" id="m0K-Gd-NeY"/>
+                    <constraint firstAttribute="bottom" secondItem="E20-6S-DAY" secondAttribute="bottom" id="ud4-wq-BYO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="leftview" destination="E20-6S-DAY" id="QMB-2w-zgO"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
